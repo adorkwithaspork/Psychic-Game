@@ -6,52 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="game.js"></script>
     <title>Psychic Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href= "assets/css/style.css" >
 </head>
 
 <header> 
     <h1> The Psychic Game!</h1>
 </header>
 <body>
-    <script>
-        
-        // Create an array for the computer to choose a random letter
-        var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-        console.log(computerChoices);
-
-        // Create varible
-        var wins = 0;
-        var losses = 0;
-        var numGuesses = 9;
-        
-        var getRandomLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        console.log(getRandomLetter)
-        
-        
     
-    </script>
+<script type= "text/javascript" src=  assets/javascript/game.js></script>
 
-    <div main.container="Main Container">
-        <h2>Guess what letter the superior computer overlords are thinking of!</h2>
-
-        <div class="wins"> 
-            <h3> Wins:</h3> (# of times the user has guessed the letter correctly)
-        </div>
-        
-        <div class="losses">
-            <h3>Losses:</h3>
-        </div>Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
-        
-        <div class="numGuessesLeft">
-            <h3>Guesses Left:</h3>
-        </div>: (# of guesses left. This will update)
-        
-        <div class="numGuessesSoFar">
-            <h3>Your Guesses So Far:</h3> (the specific letters that the user typed. Display these until the user either wins or loses.)
-            </div>
-
-    </div>
-
-
-    
 </body>
+
 </html>
