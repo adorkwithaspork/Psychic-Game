@@ -20,29 +20,37 @@ var userGuess = [];
         //Gathers Users guessed key letters
         var userGuess = event.key;
         guessedLetters.push(userGuess);
-        console.log(guessedLetters);
+       
 
         // randomly chooses a letter from the computerChoice array. This is the computers guess
         var letterToBeGuessed = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-        console.log(letterToBeGuessed);
+       
+
+        //Clears the amount Guess Key Letters when they reach the end of their left # of guesses left
+        var reset = function () {
+        guessesRemaining = ;
+        guessedLetters = [];
+      }
        
       
      
         //Logic if the computer and user guess the same key
-        if(userGuess) {
-            numberOfGuessesLeft--;
-        }
-    
-
         if (letterToBeGuessed == userGuess) {
             wins++;
+            numberOfGuessesLeft: 9;
         }
 
-        else if(letterToBeGuessed !== userGuess) {
-            losses++;
+        else {
             userGuess = guessedLetters;
-            guessedLetters.push(userGuess);
+            numberOfGuessesLeft--
             };
+
+        //If the user's guess equals 0 and runs out, the user loses and their guesses will start over for the user to try again 
+        if (numberOfGuessesLeft == 0) {
+        losses++;
+        numberOfGuessesLeft = 9;
+        reset();
+      }
         
 
         var html =
